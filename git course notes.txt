@@ -1,0 +1,77 @@
+git has 4 areas
+1. working directory
+2. staging area
+3. Repository (.git folder)
+4. Remot.
+
+
+github.com
+create account
+click home icon
+close githubboot camp'
+click new repository
+repositroyname - all lowercase no spaces separated by hyphen
+select initialize this repository with README.
+
+create a projects folder. 
+(mkdir - this is workng directory)
+copy git clone url from repositor.
+in git bash type git clone copied url
+
+it will copy the repository in projects folder.
+cd <repository name>
+ls
+
+git status 
+On branch master
+you branch is upto date with origin/master
+
+The master branch is defualt branch for a git repository.
+
+origin/master is the master branch on git hub version of repository.
+
+echo "test file creation" >> start.txt
+<this will create test file start.txt>
+
+cat start.txt -- will print file
+
+git status -- says we have untracked file.
+
+git add start.txt -- adds file to staging area.
+
+git status -- tells us that  there is new file in staging area
+
+git commit -m "adding start text file"
+
+git status --- we are back in clean working directory state. also your branch is ahead of origin/branch by 1 commit.
+
+git push origin master
+-- origin refers to github copy of repository ; master name of the branch to push; 
+
+
+-------------
+start new project without existing soruce code.
+
+cd projects
+git init fresh-project -- create a folder in workding  directory by name fresh-project.  this will be a new git repository.
+
+cd fresh-project
+ls -- no results
+ls -al -- list dot files and folders.
+cd .git
+ls -- see all folders files of git folder.
+
+git status -- shows we are on master branch. and nothing to commit yet meaning no files added 
+
+create new file in text pad here and save in fresh-project folder. new-file.txt
+
+git status --shows new file. also that initial commit.
+
+git add new-file.txt
+
+git commit -- text editor opens for you to enter commit notes.
+
+cd..
+ls -- shows folder fresh-project
+
+rm -rf fresh-project/ removes folder.
